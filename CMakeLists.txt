@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   aruco_msgs
   geometry_msgs
+  simulation_msgs
 )
 
 ###################################
@@ -41,6 +42,10 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(aruco_node src/aruco_filter.cpp)
-add_dependencies(aruco_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(aruco_node  ${catkin_LIBRARIES})
+add_executable(${PROJECT_NAME}_aruco_node src/aruco_filter.cpp)
+add_dependencies(${PROJECT_NAME}_aruco_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${PROJECT_NAME}_aruco_node  ${catkin_LIBRARIES})
+
+add_executable(${PROJECT_NAME}_unity_node src/unity_filter.cpp)
+add_dependencies(${PROJECT_NAME}_unity_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(${PROJECT_NAME}_unity_node  ${catkin_LIBRARIES})
