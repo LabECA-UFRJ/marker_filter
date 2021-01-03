@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>marker_filter</name>
+  <name>filter</name>
   <version>0.0.0</version>
-  <description>Convert controller_msgs::MotorSignal to protocol_msgs::Packet</description>
+  <description>Test</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
